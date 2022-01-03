@@ -1,0 +1,122 @@
+<品>
+    <div 类="页眉">
+        <div 类="包装器">
+            <div class="col-md-10 col-lg-7 mx-auto">
+                <h1 类="h5 文本白色">谢谢。</小时>
+            </迪夫>
+        </迪夫>
+    </迪夫>
+
+    <div 类="包装器-完全 bg-light">
+        <div class="wrapper my-6 py-4">
+            <div class="col-md-10 col-lg-7 mx-auto">
+                <h3 类="h4 字体粗细-400 mb-4">
+微软使用了数十万个开源项目
+产品和服务，其中许多是由微软工程师和团队贡献的
+一路走来。
+                </h3>
+                <p>
+数以千计的项目为这个简单的网站提供支持。感谢所有
+这些社区的参与者共同构建伟大的技术。
+                </p>
+            </迪夫>
+        </迪夫>
+    </迪夫>
+
+
+    <div 类="包装器 py-6 my-6">
+        <h3类="h3">为本站供电 </h3>
+    </迪夫>
+    
+    <div 类="包装器 py-6 my-6">
+        <div class="d-sm-flex flex-wrap">
+{% for feature in site.data.dependencies %}
+{% for project in featured.featured %}
+            <迪夫 
+                class="col-12 col-sm-6 col-md-4 col-lg-3 pr-sm-3 pr-lg-4 mb-6">
+{% if project.repo %}
+                <p><a 
+                    href="{{ project.repo }}" 
+                    目标="_blank" 
+                    rel= "noopener"
+                    class="link-arrow-external mt-3">{{ project.title }}</a></p>
+{% else %}
+                <p class="mt-3">{{ project.title }}</p>
+{% endif %}
+{% if project.description %}
+                <p>{{ project.description }}</p>
+{% endif %}
+            </迪夫>
+{% endfor %}
+{% endfor %}
+        </迪夫>
+    </迪夫>
+
+    <hr 类="包装器" />
+
+    <div 类="包装器 py-6 my-6">
+        <h3类="h3">Web 依赖项</h3>
+    </迪夫>
+
+    <div 类="包装器 py-6 my-6">
+        <div class="d-sm-flex flex-wrap">
+
+{% 表示 site.data.dependencies %} 中的组件
+{% 表示组件中的项目。组件 %}
+            <迪夫 
+                class="col-12 col-sm-6 col-md-4 col-lg-3 pr-sm-3 pr-lg-4 mb-6">
+{% if project.repo %}
+                <p><a 
+                    href="{{ project.repo }}" 
+                    目标="_blank" 
+                    rel= "noopener"
+                    class="link-arrow-external mt-3">{{ project.title }}</a></p>
+{% else %}
+                <p class="mt-3">{{ project.title }}</p>
+{% endif %}
+{% if project.description %}
+                <p>{{ project.description }}</p>
+{% endif %}
+            </迪夫>
+{% endfor %}
+{% endfor %}
+
+        </迪夫>
+    </迪夫>
+
+    <hr 类="包装器" />
+
+    <div 类="包装器 py-6 my-6">
+        <h3类="h3">开发和构建依赖项</h3>
+    </迪夫>
+
+    <div 类="包装器 py-6 my-6">
+        <div class="d-sm-flex flex-wrap">
+
+{% 表示 site.data.dependencies %} 中的依赖项
+{% for project in dependencies.dependencies %}
+            <迪夫 
+                class="col-12 col-sm-6 col-md-4 col-lg-3 pr-sm-3 pr-lg-4 mb-6">
+{% if project.repo %}
+                <p><a 
+                    href="{{ project.repo }}" 
+                    目标="_blank"
+                    rel= "noopener"
+                    class="link-arrow-external mt-3">{{ project.title }}</a></p>
+{% else %}
+                <p class="mt-3">{{ project.title }}</p>
+{% endif %}
+{% if project.description %}
+                <p>{{ project.description }}</p>
+{% endif %}
+            </迪夫>
+{% endfor %}
+{% endfor %}
+
+
+        </迪夫>
+    </迪夫>
+
+
+</品>
+© 2022 GitHub， Inc.
